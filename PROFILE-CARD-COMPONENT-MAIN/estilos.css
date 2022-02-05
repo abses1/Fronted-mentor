@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+body{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: var(--dark-grayish-blue);
+    background-color: var(--dark-cyan);
+} 
+
+.card{
+    max-width: 350px;
+    width: 350px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: -10px 30px 50px 5px rgba(37, 37, 37, 0.13) ;
+}
+
+.pattern{
+    width: 100%;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+
+.perfil{
+    position: relative;
+    top: -53px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+.texts__container{
+    margin-top: -5px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(110, 110, 110, 0.185);
+}
+
+.title{
+    font-size: 18px;
+    color: var(--very-dark-desaturated-blue);
+    margin-top: -37px;
+}
+
+.country{
+    font-size: 14px;
+    padding-top: 7px;
+}
+
+h1 span{
+    font-weight: 400;
+    margin-left: 5px;
+    color: var(--dark-grayish-blue);
+}
+
+.subtitle{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.description{
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+.card__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 23px 23px 23px 12px;
+}
+
+.wave{
+    position: absolute;
+    top: -515px;
+    left: -335px;
+    width: 80vw;
+    height: 140%;
+    background: url(images/bg-pattern-top.svg) no-repeat;
+    z-index: -1;
+}
+
+.wave-bottom{
+    position: absolute;
+    top: 317px;
+    left: 680px;
+    width: 50vw;
+    height: 54%;    
+    background: url(images/bg-pattern-bottom.svg) no-repeat;
+    z-index: -1;
+}
+
+@media (max-width:800px){
+    
+    .wave,.wave-bottom{
+        display: none;
+    }    
+}
