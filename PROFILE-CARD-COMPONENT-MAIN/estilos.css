@@ -58,7 +58,7 @@ body{
     margin-top: -37px;
 }
 
-.country{
+.city{
     font-size: 14px;
     padding-top: 7px;
 }
@@ -91,29 +91,30 @@ h1 span{
     padding: 23px 23px 23px 12px;
 }
 
-.wave{
+
+.bg{
+    display: grid;
+    grid-template-rows: repeat(10, 10vh);
+    grid-template-columns: 48vw 52vw;
     position: absolute;
-    top: -515px;
-    left: -335px;
-    width: 80vw;
-    height: 140%;
-    background: url(images/bg-pattern-top.svg) no-repeat;
     z-index: -1;
+    top: 0;
 }
 
-.wave-bottom{
-    position: absolute;
-    top: 317px;
-    left: 680px;
-    width: 50vw;
-    height: 54%;    
-    background: url(images/bg-pattern-bottom.svg) no-repeat;
-    z-index: -1;
+.bg > * {
+    overflow: hidden;
 }
 
-@media (max-width:800px){
-    
-    .wave,.wave-bottom{
-        display: none;
-    }    
+.bg__item1 {
+    transform: rotate(180deg);
+    grid-row: 1 / 8;
+}
+
+.bg__item1 img {
+    transform: rotate(-180deg);
+}
+
+.bg__item2 {
+    grid-column: 2 / 3;
+    grid-row: 6 / 11;
 }
